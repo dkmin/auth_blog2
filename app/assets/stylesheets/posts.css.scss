@@ -18,3 +18,21 @@
     text-align: right;
   }
 }
+
+// .help-inline {
+//   border-radius: 5px;
+//   border: 1px solid #b89c2b;
+//   background-color: #f5e6ad;
+//   color: #b89c2b;
+//   padding: 1em;
+//   display: block;
+//   margin-bottom: 1em;
+// }
+
+.alert-error {
+  border:1px solid #800000;
+  color: #800000;
+  background-color: #e1b7b0;
+  padding:1em;
+  border-radius: 5px;
+}

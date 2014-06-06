@@ -29,4 +29,15 @@ module ApplicationHelper
   def user_roles(user)
     user.roles.map(&:name).join(', ').titleize
   end
+
+  def link_to_provider(user)
+    provider = user.identities.map(&:provider).join(', ')
+    provider = case provider
+    when 'facebook' then link_to( 'Go to Facebook', "http://www.facebook.com" )
+    when "twitter" then link_to( 'Go to Twitter', "http://twitter.com" )
+    when "linkedin" then link_to( 'Go to Linkedin', "http://linkedin.com" )
+    when 'kakao'    then link_to( 'Go to Kakao', "http://kakao.com")
+    end
+
+  end
 end

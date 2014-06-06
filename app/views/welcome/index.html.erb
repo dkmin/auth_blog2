@@ -2,12 +2,21 @@
 <h1>Welcome to</h1>
 
 <div style="margin-bottom:2em;">
-  <%= image_tag "auth_blog_emblem.png"%>
+  <%= image_tag "auth_blog_emblem_300.png", size: "200", style: "margin:2em 0"%>
 </div>
 
 <% if user_signed_in? %>
   <p><%= link_to "로그아웃", destroy_user_session_path, method: :delete, data: {confirm: "Are you sure?" }, class: 'btn btn-default'%></p>
 <% else %>
-  <p><%= link_to "로그인", new_user_session_path, class: 'btn btn-default' %></p>
+  <p>
+    <%= link_to "로그인 (AuthBlog)", new_user_session_path, class: 'btn btn-default' %>
+  </p>
 <% end %>
+<hr>
+<p>Or, sign in with
+  <%= link_to "Facebook", user_omniauth_authorize_path(:facebook) %> /
+  <%= link_to "Twitter", user_omniauth_authorize_path(:twitter) %> /
+  <%= link_to "LinkedIn", user_omniauth_authorize_path(:linkedin) %> /
+  <%= link_to "Kakao", user_omniauth_authorize_path(:kakao) %>
+</p>
 </center>

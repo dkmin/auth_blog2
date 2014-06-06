@@ -5,6 +5,15 @@ gem 'devise'
 gem 'rolify'
 gem 'authority'
 
+# omniauth for devise
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-linkedin'
+gem 'omniauth-kakao', '~> 0.1.0'
+
+gem "letter_opener", :group => :development
+
 # 페이지 뷰를 깔끔하게 보이도록 하기 위해서 아래의 두 젬을 추가로 설치한다.
 gem 'bootstrap-sass'
 gem 'simple_form'
